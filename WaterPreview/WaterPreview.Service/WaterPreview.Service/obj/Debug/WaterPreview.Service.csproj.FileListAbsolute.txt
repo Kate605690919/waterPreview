@@ -1,0 +1,13 @@
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\WaterPreview.Service.dll.config
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\WaterPreview.Service.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\WaterPreview.Service.pdb
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\EntityFramework.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\EntityFramework.SqlServer.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\Ninject.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\EntityFramework.xml
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\EntityFramework.SqlServer.xml
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\Ninject.xml
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\obj\Debug\WaterPreview.Service.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\obj\Debug\WaterPreview.Service.pdb

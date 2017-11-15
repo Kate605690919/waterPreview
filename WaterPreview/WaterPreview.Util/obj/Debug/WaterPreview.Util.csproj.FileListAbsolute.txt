@@ -1,0 +1,6 @@
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\bin\Debug\WaterPreview.Util.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\bin\Debug\WaterPreview.Util.pdb
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\bin\Debug\Ninject.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\bin\Debug\Ninject.xml
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\obj\Debug\WaterPreview.Util.dll
+F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Util\obj\Debug\WaterPreview.Util.pdb
