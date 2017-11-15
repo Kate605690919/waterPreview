@@ -26,7 +26,7 @@ namespace WaterPreview.Redis
         public static string ALLQUALITYMETER = "AllQualityMeter";
 
 
-        public static List<T> get<T>(Func<List<T>> init, string key, int dbindex = 1)
+        public static List<T> get<T>(List<T> list, string key, int dbindex = 1)
         {
             using (RedisClient rc = new RedisClient(host))
             {
@@ -34,7 +34,7 @@ namespace WaterPreview.Redis
                 var name = key;
                 if (!rc.Exists(name))
                 {
-                    var list = init();
+                    //var list = init();
                     rc.Set(name, JsonConvert.SerializeObject(list));
                     //设置值的过期时间为24小时
                     rc.Expire(name, new TimeSpan(24, 0, 0));

@@ -20,5 +20,9 @@ namespace WaterPreview.Service.Service
             return FindAll().Where(p => p.Usr_UId == uid).SingleOrDefault();
         }
 
+        public User_t GetAccountByName(string name)
+        {
+            return FindAll().Where(p => p.Usr_Name == name).SingleOrDefault();
+        }
     }
 }

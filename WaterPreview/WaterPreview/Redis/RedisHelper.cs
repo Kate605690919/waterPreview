@@ -7,8 +7,6 @@ using System.Web;
 
 namespace WaterPreview.Redis
 {
-    public class RedisHelper
-    {
         public class RedisHelper
         {
             /// <summary>
@@ -64,6 +62,6 @@ namespace WaterPreview.Redis
                     rc.Set(name, JsonConvert.SerializeObject(value));
                 }
             }
-        }
+        
     }
 }

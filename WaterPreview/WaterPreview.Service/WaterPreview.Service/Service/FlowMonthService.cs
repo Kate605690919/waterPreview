@@ -8,9 +8,9 @@ using WaterPreview.Service.Interface;
 
 namespace WaterPreview.Service.Service
 {
-    public class FlowMeterService:BaseService<FlowMeter_t>,IFlowMeterService
+    public class FlowMonthService:BaseService<FlowMonth_t>,IFlowMonthService
     {
-        public List<FlowMeter_t> GetAllFlowMeter()
+        public List<FlowMonth_t> GetAllFlowMonth()
         {
             return FindAll();
         }

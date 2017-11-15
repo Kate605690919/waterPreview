@@ -11,3 +11,5 @@ F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bi
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\obj\Debug\WaterPreview.Service.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\obj\Debug\WaterPreview.Service.pdb
+F:\GitHub\waterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\csredis.dll
+F:\GitHub\waterPreview\WaterPreview\WaterPreview.Service\WaterPreview.Service\bin\Debug\csredis.xml

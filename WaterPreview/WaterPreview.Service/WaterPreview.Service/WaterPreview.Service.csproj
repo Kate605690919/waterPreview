@@ -116,7 +116,9 @@
     </Compile>
     <Compile Include="Interface\IAreaService.cs" />
     <Compile Include="Interface\IAreaUserService.cs" />
+    <Compile Include="Interface\IFlowDayService.cs" />
     <Compile Include="Interface\IFlowMeterService.cs" />
+    <Compile Include="Interface\IFlowMonthService.cs" />
     <Compile Include="Service\AreaService.cs" />
     <Compile Include="Interface\IAccountService.cs" />
     <Compile Include="OldQuality_t.cs">
@@ -167,7 +169,9 @@
     </Compile>
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\AreaUserService.cs" />
+    <Compile Include="Service\FlowDayService.cs" />
     <Compile Include="Service\FlowMeterService.cs" />
+    <Compile Include="Service\FlowMonthService.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>WaterModel.tt</DependentUpon>
     </Compile>

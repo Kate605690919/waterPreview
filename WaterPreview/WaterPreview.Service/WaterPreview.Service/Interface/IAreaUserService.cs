@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WaterPreview.Service.Base;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IAccountService
+    public interface IAreaUserService
     {
-        bool GetAccount();
-
-        User_t GetAccountByUid(Guid uid);
-
-        User_t GetAccountByName(string name);
+        List<AreaUser_t> GetAllAreaUser();
     }
 }

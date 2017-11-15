@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WaterPreview.Base;
+using WaterPreview.Other;
+using WaterPreview.Service;
 using WaterPreview.Service.Interface;
 
 namespace WaterPreview.Controllers
@@ -18,6 +20,28 @@ namespace WaterPreview.Controllers
             this.AddDisposableObject(accService);
             accountService = accService;
         }
+
+        [AllowAnonymous]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string userName, string password)
+        {
+            User_t user = accountService.GetAccountByName(userName);
+            if (user.Usr_UId == new Guid() || user.Usr_Password != MD5_Util.MD5Encrypt(password))
+            {
+                ViewBag.Exception = true;
+                return View();
+            }
+            Response.Cookies["username"].Value = user.Usr_UId.ToString();
+            Response.Cookies["username"].Expires = DateTime.Now.AddDays(1);
+            return RedirectToAction("index");
+        }
+
+
 
         public ActionResult Index()
         {

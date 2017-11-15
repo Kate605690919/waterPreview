@@ -28,10 +28,8 @@ F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\System.Web.WebPages.Deploym
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\System.Web.WebPages.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\System.Web.WebPages.Razor.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\WaterPreview.Service.dll
-F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\WaterPreview.Util.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\WebGrease.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\WaterPreview.Service.pdb
-F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\WaterPreview.Util.pdb
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\Ninject.xml
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\System.Web.Helpers.xml
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\System.Web.Mvc.xml
@@ -78,3 +76,5 @@ F:\GitHub\WaterPreview\WaterPreview\WaterPreview\bin\zh-Hans\Microsoft.Owin.Secu
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\obj\Debug\WaterPreview.csprojResolveAssemblyReference.cache
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\obj\Debug\WaterPreview.dll
 F:\GitHub\WaterPreview\WaterPreview\WaterPreview\obj\Debug\WaterPreview.pdb
+F:\GitHub\waterPreview\WaterPreview\WaterPreview\bin\csredis.dll
+F:\GitHub\waterPreview\WaterPreview\WaterPreview\bin\csredis.xml

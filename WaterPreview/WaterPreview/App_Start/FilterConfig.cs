@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using WaterPreview.Other.Attribute;
 
 namespace WaterPreview
 {
@@ -8,6 +9,8 @@ namespace WaterPreview
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new LoginAttribute());
+
         }
     }
 }

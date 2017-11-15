@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IAccountService
+    public interface IFlowDayService
     {
-        bool GetAccount();
-
-        User_t GetAccountByUid(Guid uid);
-
-        User_t GetAccountByName(string name);
+        List<FlowDay_t> GetAllFlowDay();
     }
 }
