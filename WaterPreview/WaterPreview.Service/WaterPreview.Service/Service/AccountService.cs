@@ -10,10 +10,14 @@ namespace WaterPreview.Service.Service
 {
     public class AccountService : BaseService<User_t>,IAccountService
     {
-        public bool GetAccount()
+        public List<User_t> GetAllAccount()
         {
-            FindAll();
-            return true;
+            return FindAll();
+        }
+
+        public User_t GetAccountByUid(Guid uid)
+        {
+            return FindAll().Where(p => p.Usr_UId == uid).SingleOrDefault();
         }
 
     }

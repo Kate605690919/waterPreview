@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IAccountService
+    public interface IFlowMeterService
     {
-        bool GetAccount();
-        User_t GetAccountByUid(Guid uid);
     }
 }

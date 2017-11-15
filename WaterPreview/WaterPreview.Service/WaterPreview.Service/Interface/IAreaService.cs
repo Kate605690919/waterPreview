@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IAccountService
+    public interface IAreaService
     {
-        bool GetAccount();
-        User_t GetAccountByUid(Guid uid);
+        Area_t GetAreaByUserUid(Guid useruid);
+
+        List<Area_t> GetAllArea();
     }
+
 }

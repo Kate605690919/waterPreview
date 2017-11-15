@@ -75,8 +75,6 @@ namespace WaterPreview.Service.Base
 
         public bool Save()
         {
-            //using (dpnetwork_data_20160419_NewEntities WaterEntities = new dpnetwork_data_20160419_NewEntities())
-            //{
             try
             {
                 WaterEntities.SaveChanges();
@@ -87,9 +85,7 @@ namespace WaterPreview.Service.Base
                 return false;
                 throw e;
             }
-            //} 
         }
-
 
         public bool UpdateById(string keyName, T input)
         {
