@@ -12,7 +12,7 @@ namespace WaterPreview.Service.Service
     {
         public List<User_t> GetAllAccount()
         {
-            return FindAll();
+            return FindAll().ToList();
         }
 
         public User_t GetAccountByUid(Guid uid)

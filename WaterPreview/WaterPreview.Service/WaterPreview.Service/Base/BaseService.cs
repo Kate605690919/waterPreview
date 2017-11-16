@@ -133,7 +133,7 @@ namespace WaterPreview.Service.Base
         }
 
 
-        public List<T> FindAll()
+        public IEnumerable<T> FindAll()
         {
             using (dpnetwork_data_20160419_NewEntities WaterEntities = new dpnetwork_data_20160419_NewEntities())
             {
@@ -143,9 +143,9 @@ namespace WaterPreview.Service.Base
                     PropertyInfo[] properties = type.GetProperties();
                     PropertyInfo property = type.GetProperty(typeof(T).Name);
                     DbSet<T> value = (DbSet<T>)property.GetValue(WaterEntities, null);
-                    List<T> list = new List<T>();
-                    list = value.ToList();
-                    return list;
+                    //List<T> list = new List<T>();
+                    //list = value.ToList();
+                    return value;
                 }
                 catch (Exception e)
                 {

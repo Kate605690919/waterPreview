@@ -10,7 +10,7 @@ namespace WaterPreview.Service.Service
 {
     public class FlowMonthService:BaseService<FlowMonth_t>,IFlowMonthService
     {
-        public List<FlowMonth_t> GetAllFlowMonth()
+        public IEnumerable<FlowMonth_t> GetAllFlowMonth()
         {
             return FindAll();
         }

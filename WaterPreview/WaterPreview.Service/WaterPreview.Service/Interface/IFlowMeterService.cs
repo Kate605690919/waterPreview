@@ -8,6 +8,6 @@ namespace WaterPreview.Service.Interface
 {
     public interface IFlowMeterService
     {
-        List<FlowMeter_t> GetAllFlowMeter();
+        IEnumerable<FlowMeter_t> GetAllFlowMeter();
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IAreaService
+    public interface IPressureMonthService
     {
-        Area_t GetAreaByUserUid(Guid useruid);
-
-        IEnumerable<Area_t> GetAllArea();
+        IEnumerable<PressureMonth_t> GetAllPressureMonth();
     }
-
 }

@@ -8,9 +8,9 @@ using WaterPreview.Service.Interface;
 
 namespace WaterPreview.Service.Service
 {
-    public class FlowMeterService:BaseService<FlowMeter_t>,IFlowMeterService
+    public class PressureMeterService:BaseService<PressureMeter_t>,IPressureMeterService
     {
-        public IEnumerable<FlowMeter_t> GetAllFlowMeter()
+        public IEnumerable<PressureMeter_t> GetAllPressureMeter()
         {
             return FindAll();
         }

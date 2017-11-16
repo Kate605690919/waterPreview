@@ -33,7 +33,7 @@ namespace WaterPreview.Controllers
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
             var timeint = int.Parse(time.ToString("yyyyMM"));
             dpnetwork_data_20160419_NewEntities db = new dpnetwork_data_20160419_NewEntities();
-            //获取当前设备前一天9点至当天9点的flowhour
+            //获取当前设备前一月9点至当天9点的flowhour
             var origindata = GetdayFlowByUidAndDate(uid, time);
             //当前日期的前一天
             var lastdaytime = int.Parse(time.AddDays(-1).ToString("yyyyMMdd"));
@@ -128,7 +128,8 @@ namespace WaterPreview.Controllers
         public JsonResult Detail(Guid uid)
         {
             JsonResult result = new JsonResult();
-            result.Data = DBHelper.get<FlowMeter_t>(flowmeter_Service.GetAllFlowMeter(),UserContext.allFlowMeter);
+            Func<List<FlowMeter_t>> t = ()=>flowmeter_Service.GetAllFlowMeter().Where(p=>p.FM_UId==uid).ToList();
+            result.Data = DBHelper.get<FlowMeter_t>(t,UserContext.allFlowMeter);
             return result;
         }
 

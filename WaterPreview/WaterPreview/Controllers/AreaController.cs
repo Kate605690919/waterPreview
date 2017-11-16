@@ -42,7 +42,8 @@ namespace WaterPreview.Controllers
                 areauid = UserContext.areaSourceUid;
             }
             IAreaService area_service = new AreaService();
-            List<Area_t> all = DBHelper.get<Area_t>(area_service.GetAllArea(),UserContext.allArea);
+            Func<List<Area_t>> func = () =>area_service.GetAllArea().ToList();
+            List<Area_t> all = DBHelper.get<Area_t>(func, UserContext.allArea);
 
             Area_t area = all.First(p => p.Ara_UId == areauid);
             var list = new

@@ -8,7 +8,7 @@ namespace WaterPreview.Service.Interface
 {
     public interface IAccountService
     {
-        bool GetAccount();
+        List<User_t> GetAllAccount();
 
         User_t GetAccountByUid(Guid uid);
 
