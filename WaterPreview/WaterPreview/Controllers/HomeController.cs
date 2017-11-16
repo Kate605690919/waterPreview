@@ -24,6 +24,7 @@ namespace WaterPreview.Controllers
         [AllowAnonymous]
         public ActionResult Login()
         {
+            ViewBag.Exception = false;
             return View();
         }
 
@@ -41,7 +42,11 @@ namespace WaterPreview.Controllers
             return RedirectToAction("index");
         }
 
-
+        public JsonResult GetMostVisitsDevice(List<Guid> uidlist)
+        {
+            JsonResult result = new JsonResult();
+            return result;
+        }
 
         public ActionResult Index()
         {
