@@ -144,8 +144,9 @@ namespace WaterPreview.Service.Base
                     PropertyInfo property = type.GetProperty(typeof(T).Name);
                     DbSet<T> value = (DbSet<T>)property.GetValue(WaterEntities, null);
                     //List<T> list = new List<T>();
-                    //list = value.ToList();
-                    return value;
+                    List<T> valuelist = value.ToList();
+                    IEnumerable<T> list = valuelist.AsEnumerable();
+                    return list;
                 }
                 catch (Exception e)
                 {

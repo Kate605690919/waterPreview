@@ -10,10 +10,10 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <input type="hidden" value="@WaterManage_Service.Core.UserContext.GetCurrentAccount().Usr_Name" id="roleName" />
-    <input type="hidden" value="@WaterManage_Service.Core.UserContext.GetCurrentAccount().Usr_Type" id="role" />
-    <input type="hidden" value="@WaterManage_Service.Core.UserContext.GetCurrentAccount().Usr_UId" id="userUid" />
-    <input type="hidden" value="@WaterManage_Service.Core.UserContext.GetAreaByUserUid(@WaterManage_Service.Core.UserContext.GetCurrentAccount().Usr_UId)" id="UserAreaUid" />
+    <input type="hidden" value="@WaterPreview.Other.UserContext.GetCurrentAccount().Usr_Name" id="roleName" />
+    <input type="hidden" value="@WaterPreview.Other.UserContext.GetCurrentAccount().Usr_Type" id="role" />
+    <input type="hidden" value="@WaterPreview.Other.UserContext.GetCurrentAccount().Usr_UId" id="userUid" />
+    <input type="hidden" value="@WaterPreview.Other.UserContext.GetAreaByUserUid(@WaterPreview.Other.UserContext.GetCurrentAccount().Usr_UId)" id="UserAreaUid" />
     <div class="container-fluid body-content">
         <div id="content">
             @RenderBody()
