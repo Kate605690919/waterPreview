@@ -17,6 +17,13 @@ namespace WaterPreview.Service.Interface
             return FindAll().Where(p => p.Ara_UId == areauser.AU_AreaUId).SingleOrDefault();
         }
 
+        public Area_t GetAreaByDeviceUid(Guid deviceUid)
+        {
+            IAreaDeviceService ad_service = new AreaDeviceService();
+            AreaDevice_t ad = ad_service.GetAreaDeviceByDeviceUid(deviceUid);
+            return FindAll().Where(p => p.Ara_UId == ad.AD_AreaUid).FirstOrDefault();
+        }
+
         public IEnumerable<Area_t> GetAllArea()
         {
             return FindAll();

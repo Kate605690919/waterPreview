@@ -10,6 +10,8 @@ namespace WaterPreview.Service.Interface
     {
         Area_t GetAreaByUserUid(Guid useruid);
 
+        Area_t GetAreaByDeviceUid(Guid deviceUid);
+
         IEnumerable<Area_t> GetAllArea();
     }
 

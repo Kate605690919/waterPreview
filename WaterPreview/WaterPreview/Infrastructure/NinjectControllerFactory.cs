@@ -31,6 +31,21 @@ namespace WaterPreview.Util.Infrastructure
             // todo:后面再来添加绑定
 
             ninjectKernel.Bind<IAccountService>().To<AccountService>();
+            ninjectKernel.Bind<IAreaDeviceService>().To<AreaDeviceService>();
+            ninjectKernel.Bind<IAreaService>().To<AreaService>();
+            ninjectKernel.Bind<IAreaUserService>().To<AreaUserService>();
+            ninjectKernel.Bind<IFlowDayService>().To<FlowDayService>();
+            ninjectKernel.Bind<IFlowMeterService>().To<FlowMeterService>();
+            ninjectKernel.Bind<IFlowMeterStatusService>().To<FlowMeterStatusService>();
+            ninjectKernel.Bind<IFlowMonthService>().To<FlowMonthService>();
+            ninjectKernel.Bind<IPressureHourService>().To<PressureHourService>();
+            ninjectKernel.Bind<IPressureMeterService>().To<PressureMeterService>();
+            ninjectKernel.Bind<IPressureMeterStatusService>().To<PressureMeterStatusService>();
+            ninjectKernel.Bind<IPressureMonthService>().To<PressureMonthService>();
+            ninjectKernel.Bind<IQualityMeterService>().To<QualityMeterService>();
+            ninjectKernel.Bind<IQualityMeterStatusService>().To<IQualityMeterStatusService>();
+
+
 
         }
     }

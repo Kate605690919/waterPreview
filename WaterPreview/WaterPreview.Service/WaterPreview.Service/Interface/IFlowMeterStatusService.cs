@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WaterPreview.Service.Interface
 {
-    public interface IPressureMeterService
+    public interface IFlowMeterStatusService
     {
-        IEnumerable<PressureMeter_t> GetAllPressureMeter();
-
-        List<Object> GetPressureMeterStatusAndArea();
+        List<FlowMeterStatus_t> GetFlowMeterStatusByUid(Guid fmuid);
     }
 }

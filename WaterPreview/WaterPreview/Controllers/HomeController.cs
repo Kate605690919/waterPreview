@@ -42,7 +42,7 @@ namespace WaterPreview.Controllers
             return RedirectToAction("index");
         }
 
-        public JsonResult GetMostVisitsDevice(List<Guid> uidlist)
+        public JsonResult GetMostVisitsDevice(string[] uidlist)
         {
             JsonResult result = new JsonResult();
             return result;

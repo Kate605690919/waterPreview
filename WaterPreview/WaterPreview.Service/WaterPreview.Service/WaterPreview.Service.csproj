@@ -114,14 +114,20 @@
     <Compile Include="InnerRole_t.cs">
       <DependentUpon>WaterModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IAreaDeviceService.cs" />
     <Compile Include="Interface\IAreaService.cs" />
     <Compile Include="Interface\IAreaUserService.cs" />
     <Compile Include="Interface\IFlowDayService.cs" />
     <Compile Include="Interface\IFlowMeterService.cs" />
+    <Compile Include="Interface\IFlowMeterStatusService.cs" />
     <Compile Include="Interface\IFlowMonthService.cs" />
     <Compile Include="Interface\IPressureHourService.cs" />
     <Compile Include="Interface\IPressureMeterService.cs" />
+    <Compile Include="Interface\IPressureMeterStatusService.cs" />
     <Compile Include="Interface\IPressureMonthService.cs" />
+    <Compile Include="Interface\IQualityMeterService.cs" />
+    <Compile Include="Interface\IQualityMeterStatusService.cs" />
+    <Compile Include="Service\AreaDeviceService.cs" />
     <Compile Include="Service\AreaService.cs" />
     <Compile Include="Interface\IAccountService.cs" />
     <Compile Include="OldQuality_t.cs">
@@ -174,10 +180,14 @@
     <Compile Include="Service\AreaUserService.cs" />
     <Compile Include="Service\FlowDayService.cs" />
     <Compile Include="Service\FlowMeterService.cs" />
+    <Compile Include="Service\FlowMeterStatusService.cs" />
     <Compile Include="Service\FlowMonthService.cs" />
     <Compile Include="Service\PressureHourService.cs" />
     <Compile Include="Service\PressureMeterService.cs" />
+    <Compile Include="Service\PressureMeterStatusService.cs" />
     <Compile Include="Service\PressureMonthService.cs" />
+    <Compile Include="Service\QualityMeterService.cs" />
+    <Compile Include="Service\QualityMeterStatusService.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>WaterModel.tt</DependentUpon>
     </Compile>

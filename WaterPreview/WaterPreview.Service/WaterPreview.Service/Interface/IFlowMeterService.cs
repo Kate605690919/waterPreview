@@ -9,5 +9,7 @@ namespace WaterPreview.Service.Interface
     public interface IFlowMeterService
     {
         IEnumerable<FlowMeter_t> GetAllFlowMeter();
+
+        List<Object> GetFlowMeterStatusAndArea();
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,14 +17,21 @@ namespace WaterPreview.Controllers
     {
         private static IAreaService areaService;
         private static IFlowMeterService flowmeterService;
+        private static IPressureMeterService pressuremeterService;
+        private static IQualityMeterService qualitymeterService;
 
 
-        public AreaController(IAreaService arService, IFlowMeterService fmService)
+        public AreaController(IAreaService arService, IFlowMeterService fmService,IPressureMeterService pmService,IQualityMeterService qmService)
         {
             this.AddDisposableObject(arService);
             areaService = arService;
             this.AddDisposableObject(fmService);
             flowmeterService = fmService;
+
+            this.AddDisposableObject(pmService);
+            pressuremeterService = pmService;
+            this.AddDisposableObject(qmService);
+            qualitymeterService = qmService;
         }
 
 
@@ -72,5 +81,50 @@ namespace WaterPreview.Controllers
                 });
         }
 
+
+        public JsonResult GetFlowMeterByAreaUid(Guid areaUid)
+        {
+            JsonResult result = new JsonResult();
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            Func<List<object>> fmAndStatusArea = () => flowmeterService.GetFlowMeterStatusAndArea();
+            List<object> fmstatusAndAreaList = DBHelper.get<object>(fmAndStatusArea,UserContext.allFlowMeterStatusAndArea);
+            //result.Data = new
+            //{
+            //    type = "GetFlowMeterByAreaUid",
+            //    data = fmstatusAndAreaList
+            //};
+            result.Data = fmstatusAndAreaList;
+            return result;
+        }
+
+        public JsonResult GetPressureMeterByAreaUid(Guid areaUid)
+        {
+            JsonResult result = new JsonResult();
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            Func<List<object>> pmAndStatusArea = () => pressuremeterService.GetPressureMeterStatusAndArea();
+            List<object> pmstatusAndAreaList = DBHelper.get<object>(pmAndStatusArea, UserContext.allPressureMeterStatusAndArea);
+            result.Data = pmstatusAndAreaList;
+            //result.Data = new
+            //{
+            //    type = "GetPressureMeterByAreaUid",
+            //    data = pmstatusAndAreaList
+            //};
+            return result;
+        }
+
+        public JsonResult GetQualityMeterByAreaUid(Guid areaUid)
+        {
+            JsonResult result = new JsonResult();
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            Func<List<object>> qmAndStatusArea = () => qualitymeterService.GetQualityMeterStatusAndArea();
+            List<object> qmstatusAndAreaList = DBHelper.get<object>(qmAndStatusArea, UserContext.allQualityMeterStatusAndArea);
+            result.Data = qmstatusAndAreaList;
+            //result.Data = new
+            //{
+            //    type = "GetQualityMeterByAreaUid",
+            //    data = qmstatusAndAreaList
+            //};
+            return result;
+        }
     }
 }

@@ -20,6 +20,9 @@ namespace WaterPreview.Other
         public static Guid areaSourceUid = Guid.Parse("6F6B8DB5-1202-4644-B1B2-A52284D73E07");
         public static string allArea = "AllArea";
         public static string allFlowMeter = "AllFlowMeter";
+        public static string allFlowMeterStatusAndArea = "allFlowMeterStatusAndArea";
+        public static string allPressureMeterStatusAndArea = "allPressureMeterStatusAndArea";
+        public static string allQualityMeterStatusAndArea = "allQualityMeterStatusAndArea";
 
 
         public static User_t GetCurrentAccount()
