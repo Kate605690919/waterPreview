@@ -10,7 +10,7 @@ namespace WaterPreview.Service.Service
 {
     public class PressureMonthService:BaseService<PressureMonth_t>,IPressureMonthService
     {
-        public IEnumerable<PressureMonth_t> GetAllPressureMonth()
+        public List<PressureMonth_t> GetAllPressureMonth()
         {
             return FindAll();
         }

@@ -24,7 +24,7 @@ namespace WaterPreview.Service.Interface
             return FindAll().Where(p => p.Ara_UId == ad.AD_AreaUid).FirstOrDefault();
         }
 
-        public IEnumerable<Area_t> GetAllArea()
+        public List<Area_t> GetAllArea()
         {
             return FindAll();
         }

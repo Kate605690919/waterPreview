@@ -11,10 +11,10 @@ namespace WaterPreview.Service.Service
     public class FlowDayService:BaseService<FlowDay_t>,IFlowDayService
     {
 
-        public IEnumerable<FlowDay_t> GetAllFlowDay(Guid fmuid)
+        public List<FlowDay_t> GetAllFlowDay(Guid fmuid)
         {
             var fdlist = FindAll().Where(p=>p.Fld_FlowMeterUid==fmuid);
-            return fdlist.Count() == 0 ? new List<FlowDay_t>() : fdlist;
+            return fdlist.Count() == 0 ? new List<FlowDay_t>() : fdlist.ToList();
         }
     }
 }

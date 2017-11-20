@@ -8,7 +8,7 @@ namespace WaterPreview.Service.Interface
 {
     public interface IPressureHourService
     {
-        IEnumerable<PressureHour_t> GetPressureHourByUid(Guid pmUid);
+        List<PressureHour_t> GetPressureHourByUid(Guid pmUid);
 
     }
 }

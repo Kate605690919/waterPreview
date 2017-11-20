@@ -8,6 +8,6 @@ namespace WaterPreview.Service.Interface
 {
     public interface IPressureMonthService
     {
-        IEnumerable<PressureMonth_t> GetAllPressureMonth();
+        List<PressureMonth_t> GetAllPressureMonth();
     }
 }

@@ -10,7 +10,7 @@ namespace WaterPreview.Service.Service
 {
     public class AreaUserService:BaseService<AreaUser_t>,IAreaUserService
     {
-        public IEnumerable<AreaUser_t> GetAllAreaUser()
+        public List<AreaUser_t> GetAllAreaUser()
         {
             return FindAll();
         }

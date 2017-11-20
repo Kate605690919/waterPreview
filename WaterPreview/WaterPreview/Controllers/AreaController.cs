@@ -10,6 +10,7 @@ using WaterPreview.Other;
 using WaterPreview.Redis;
 using WaterPreview.Service;
 using WaterPreview.Service.Interface;
+using WaterPreview.Service.RedisContract;
 
 namespace WaterPreview.Controllers
 {
@@ -38,6 +39,7 @@ namespace WaterPreview.Controllers
 
         public JsonResult AreaTree()
         {
+            DBHelper.ClearCache();
             JsonResult result = new JsonResult();
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
 
@@ -86,14 +88,14 @@ namespace WaterPreview.Controllers
         {
             JsonResult result = new JsonResult();
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            Func<List<object>> fmAndStatusArea = () => flowmeterService.GetFlowMeterStatusAndArea();
-            List<object> fmstatusAndAreaList = DBHelper.get<object>(fmAndStatusArea,UserContext.allFlowMeterStatusAndArea);
-            //result.Data = new
-            //{
-            //    type = "GetFlowMeterByAreaUid",
-            //    data = fmstatusAndAreaList
-            //};
-            result.Data = fmstatusAndAreaList;
+            Func<List<FlowMeterStatusAndArea>> fmAndStatusArea = () => flowmeterService.GetFlowMeterStatusAndArea();
+            List<FlowMeterStatusAndArea> fmstatusAndAreaList = DBHelper.get<FlowMeterStatusAndArea>(fmAndStatusArea, UserContext.allFlowMeterStatusAndArea);
+
+
+            string dataresult = ToJson<List<FlowMeterStatusAndArea>>.Obj2Json<List<FlowMeterStatusAndArea>>(fmstatusAndAreaList);
+            dataresult = dataresult.Replace("\\\\", "");
+
+            result.Data = dataresult;
             return result;
         }
 
@@ -101,14 +103,13 @@ namespace WaterPreview.Controllers
         {
             JsonResult result = new JsonResult();
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            Func<List<object>> pmAndStatusArea = () => pressuremeterService.GetPressureMeterStatusAndArea();
-            List<object> pmstatusAndAreaList = DBHelper.get<object>(pmAndStatusArea, UserContext.allPressureMeterStatusAndArea);
-            result.Data = pmstatusAndAreaList;
-            //result.Data = new
-            //{
-            //    type = "GetPressureMeterByAreaUid",
-            //    data = pmstatusAndAreaList
-            //};
+            Func<List<PressureMeterStatusAndArea>> pmAndStatusArea = () => pressuremeterService.GetPressureMeterStatusAndArea();
+            List<PressureMeterStatusAndArea> pmstatusAndAreaList = DBHelper.get<PressureMeterStatusAndArea>(pmAndStatusArea, UserContext.allPressureMeterStatusAndArea);
+            //result.Data = pmstatusAndAreaList;
+            string dataresult = ToJson<List<PressureMeterStatusAndArea>>.Obj2Json<List<PressureMeterStatusAndArea>>(pmstatusAndAreaList).Replace("\\\\", "");
+            dataresult = dataresult.Replace("\\\\", "");
+
+            result.Data = dataresult;
             return result;
         }
 
@@ -116,14 +117,13 @@ namespace WaterPreview.Controllers
         {
             JsonResult result = new JsonResult();
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            Func<List<object>> qmAndStatusArea = () => qualitymeterService.GetQualityMeterStatusAndArea();
-            List<object> qmstatusAndAreaList = DBHelper.get<object>(qmAndStatusArea, UserContext.allQualityMeterStatusAndArea);
-            result.Data = qmstatusAndAreaList;
-            //result.Data = new
-            //{
-            //    type = "GetQualityMeterByAreaUid",
-            //    data = qmstatusAndAreaList
-            //};
+            Func<List<QualityMeterStatusAndArea>> qmAndStatusArea = () => qualitymeterService.GetQualityMeterStatusAndArea();
+            List<QualityMeterStatusAndArea> qmstatusAndAreaList = DBHelper.get<QualityMeterStatusAndArea>(qmAndStatusArea, UserContext.allQualityMeterStatusAndArea);
+            //result.Data = qmstatusAndAreaList;
+            string dataresult = ToJson<List<QualityMeterStatusAndArea>>.Obj2Json<List<QualityMeterStatusAndArea>>(qmstatusAndAreaList).Replace("\\\\", "");
+            dataresult = dataresult.Replace("\\\\", "");
+
+            result.Data = dataresult;
             return result;
         }
     }

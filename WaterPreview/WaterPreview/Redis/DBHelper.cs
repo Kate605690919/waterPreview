@@ -45,6 +45,19 @@ namespace WaterPreview.Redis
             }
         }
 
+        public static void ClearCache()
+        {
+            try
+            {
+                //if (!IsOpenCache) return;
+                using (IRedisClient Redis = new RedisClient(host))
+                {
+                    Redis.FlushAll();
+                }
+            }
+            catch { return; }
+        } 
+
         //#region 获取流量计、水压计、水质计和区域列表
         ///// <summary>
         ///// 获取所有流量计

@@ -9,6 +9,6 @@ namespace WaterPreview.Service.Interface
 {
     public interface IAreaUserService
     {
-        IEnumerable<AreaUser_t> GetAllAreaUser();
+        List<AreaUser_t> GetAllAreaUser();
     }
 }

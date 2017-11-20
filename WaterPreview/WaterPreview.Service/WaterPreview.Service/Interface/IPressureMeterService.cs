@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WaterPreview.Service.RedisContract;
 
 namespace WaterPreview.Service.Interface
 {
     public interface IPressureMeterService
     {
-        IEnumerable<PressureMeter_t> GetAllPressureMeter();
+        List<PressureMeter_t> GetAllPressureMeter();
 
-        List<Object> GetPressureMeterStatusAndArea();
+        List<PressureMeterStatusAndArea> GetPressureMeterStatusAndArea();
     }
 }
