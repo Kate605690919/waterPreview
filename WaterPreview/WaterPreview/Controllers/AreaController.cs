@@ -43,26 +43,30 @@ namespace WaterPreview.Controllers
             JsonResult result = new JsonResult();
             result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
 
+            IAreaService area_service = new AreaService();
+            Func<List<Area_t>> func = () => area_service.GetAllArea().ToList();
+            List<Area_t> all = DBHelper.get<Area_t>(func, UserContext.allArea);
+            var areaChild = new List<Area_t>();
+            Area_t area = new Area_t();
             Guid areauid = new Guid();
+
             if (UserContext.account.Usr_Type == 3)
             {
                 areauid = UserContext.GetAreaByUserUid(UserContext.account.Usr_UId);
+                area = all.First(p => p.Ara_UId == areauid);
             }
             else
             {
                 areauid = UserContext.areaSourceUid;
+                area = all.First(p => p.Ara_UId == areauid);
+                areaChild = GetChild(area.Ara_UId, all);
             }
-            IAreaService area_service = new AreaService();
-            Func<List<Area_t>> func = () =>area_service.GetAllArea().ToList();
-            List<Area_t> all = DBHelper.get<Area_t>(func, UserContext.allArea);
-
-            Area_t area = all.First(p => p.Ara_UId == areauid);
             var list = new
             {
                 text = area.Ara_Name,
                 description = area.Ara_Description,
                 id = area.Ara_UId,
-                children = GetChild(area.Ara_UId, all)
+                children = areaChild
             };
             result.Data = list;
             return result;
