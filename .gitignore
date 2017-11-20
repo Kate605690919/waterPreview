@@ -253,3 +253,7 @@ WaterManageRepository/Repository/PressureMeter/PressureHourRepository.cs
 WaterManageRepository/Repository/FlowMeter/FlowMeterRepository.cs
 WaterManageRepository/IRepository/IWaterConsumerRepository.cs
 WaterManageRepository/Repository/AccountRepository.cs
+*.dll
+*.pdb
+*.cache
+*.txt
